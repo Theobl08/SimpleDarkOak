@@ -1,6 +1,6 @@
-package com.theobl.simpledarkoak.datagen;
+package net.theobl.simpledarkoak.datagen;
 
-import com.theobl.simpledarkoak.SimpleDarkOak;
+import net.theobl.simpledarkoak.SimpleDarkOak;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;

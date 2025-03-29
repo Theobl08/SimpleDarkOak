@@ -1,6 +1,6 @@
-package com.theobl.simpledarkoak.mixin;
+package net.theobl.simpledarkoak.mixin;
 
-import com.theobl.simpledarkoak.worldgen.ModConfiguredFeatures;
+import net.theobl.simpledarkoak.worldgen.ModConfiguredFeatures;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.grower.DarkOakTreeGrower;

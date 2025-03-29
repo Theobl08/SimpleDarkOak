@@ -1,6 +1,6 @@
-package com.theobl.simpledarkoak.worldgen;
+package net.theobl.simpledarkoak.worldgen;
 
-import com.theobl.simpledarkoak.SimpleDarkOak;
+import net.theobl.simpledarkoak.SimpleDarkOak;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;

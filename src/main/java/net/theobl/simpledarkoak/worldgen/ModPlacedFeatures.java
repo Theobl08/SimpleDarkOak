@@ -1,6 +1,6 @@
-package com.theobl.simpledarkoak.worldgen;
+package net.theobl.simpledarkoak.worldgen;
 
-import com.theobl.simpledarkoak.SimpleDarkOak;
+import net.theobl.simpledarkoak.SimpleDarkOak;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;

@@ -5,7 +5,7 @@
   "compatibilityLevel": "JAVA_8",
   "refmap": "SimpleDarkOak.refmap.json",
   "mixins": [
-    "DarkOakTreeGrowerMixin"
+    "net.theobl.simpledarkoak.mixin.DarkOakTreeGrowerMixin"
   ],
   "client": [
   ],
