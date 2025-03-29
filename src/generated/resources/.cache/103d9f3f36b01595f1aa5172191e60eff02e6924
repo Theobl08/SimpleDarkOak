@@ -1,4 +1,7 @@
-// 1.21.1	2025-03-29T13:25:42.6916746	Registries
+// 1.21.4	2025-03-29T16:21:42.5108265	Registries
 a7bd2c2be99631cea71f9b43692b6d552ec3c667 data/simpledarkoak/neoforge/biome_modifier/add_simple_dark_oak.json
+0c9690dc49970c2091d547d7f6fa3e453805f2c7 data/simpledarkoak/neoforge/biome_modifier/add_simple_pale_oak.json
 875019ea8d9ba16c2e8c541d40d3d041e237540f data/simpledarkoak/worldgen/configured_feature/simple_dark_oak.json
+6735756b586fd763bfefcf26ddb7a7a5fa5980fa data/simpledarkoak/worldgen/configured_feature/simple_pale_oak.json
 27adf712147e9e7dec2f7d60cca97b36ee94a904 data/simpledarkoak/worldgen/placed_feature/simple_dark_oak_placed.json
+931215e618d83efd7c7e97ca74d77a8339587fe5 data/simpledarkoak/worldgen/placed_feature/simple_pale_oak_placed.json

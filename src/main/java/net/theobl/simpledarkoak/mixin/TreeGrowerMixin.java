@@ -14,4 +14,7 @@ public class TreeGrowerMixin {
     @Shadow
     //@Final
     public static final TreeGrower DARK_OAK = new TreeGrower("dark_oak", Optional.of(TreeFeatures.DARK_OAK), Optional.of(ModConfiguredFeatures.SIMPLE_DARK_OAK_KEY), Optional.empty());
+
+    @Shadow
+    public static final TreeGrower PALE_OAK = new TreeGrower("pale_oak", Optional.of(TreeFeatures.PALE_OAK_BONEMEAL), Optional.of(ModConfiguredFeatures.SIMPLE_PALE_OAK_KEY), Optional.empty());
 }

@@ -17,6 +17,7 @@ import java.util.List;
 
 public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> SIMPLE_DARK_OAK_PLACED_KEY = registerKey("simple_dark_oak_placed");
+    public static final ResourceKey<PlacedFeature> SIMPLE_PALE_OAK_PLACED_KEY = registerKey("simple_pale_oak_placed");
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -24,6 +25,10 @@ public class ModPlacedFeatures {
         register(context, SIMPLE_DARK_OAK_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SIMPLE_DARK_OAK_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(2,0.1f,1),
                         Blocks.DARK_OAK_SAPLING));
+
+        register(context, SIMPLE_PALE_OAK_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SIMPLE_PALE_OAK_KEY),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(2,0.1f,1),
+                        Blocks.PALE_OAK_SAPLING));
     }
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {

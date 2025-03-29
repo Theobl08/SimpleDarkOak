@@ -14,6 +14,7 @@ import net.neoforged.neoforge.registries.NeoForgeRegistries;
 
 public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_SIMPLE_DARK_OAK = registerKey("add_simple_dark_oak");
+    public static final ResourceKey<BiomeModifier> ADD_SIMPLE_PALE_OAK = registerKey("add_simple_pale_oak");
 
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         // ConfiguredFeature -> PlacedFeature -> BiomeModifiers
@@ -23,6 +24,11 @@ public class ModBiomeModifiers {
         context.register(ADD_SIMPLE_DARK_OAK, new BiomeModifiers.AddFeaturesBiomeModifier(
                 HolderSet.direct(biomes.getOrThrow(Biomes.DARK_FOREST)),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.SIMPLE_DARK_OAK_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+
+        context.register(ADD_SIMPLE_PALE_OAK, new BiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(Biomes.PALE_GARDEN)),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.SIMPLE_PALE_OAK_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
     }
 

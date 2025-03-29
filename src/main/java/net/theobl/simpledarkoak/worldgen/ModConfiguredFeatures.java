@@ -18,12 +18,20 @@ import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlac
 
 public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> SIMPLE_DARK_OAK_KEY = registerKey("simple_dark_oak");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SIMPLE_PALE_OAK_KEY = registerKey("simple_pale_oak");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
         register(context, SIMPLE_DARK_OAK_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(Blocks.DARK_OAK_LOG),
                 new StraightTrunkPlacer(4,1,0),
                 BlockStateProvider.simple(Blocks.DARK_OAK_LEAVES),
+                new DarkOakFoliagePlacer(ConstantInt.of(0), ConstantInt.of(0)),
+                new TwoLayersFeatureSize(1,0,1)).ignoreVines().build());
+
+        register(context, SIMPLE_PALE_OAK_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(Blocks.PALE_OAK_LOG),
+                new StraightTrunkPlacer(4,1,0),
+                BlockStateProvider.simple(Blocks.PALE_OAK_LEAVES),
                 new DarkOakFoliagePlacer(ConstantInt.of(0), ConstantInt.of(0)),
                 new TwoLayersFeatureSize(1,0,1)).ignoreVines().build());
     }
