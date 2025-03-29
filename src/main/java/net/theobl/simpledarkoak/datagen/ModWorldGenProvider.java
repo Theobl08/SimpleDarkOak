@@ -1,9 +1,9 @@
-package com.theobl.simpledarkoak.datagen;
+package net.theobl.simpledarkoak.datagen;
 
-import com.theobl.simpledarkoak.SimpleDarkOak;
-import com.theobl.simpledarkoak.worldgen.ModBiomeModifiers;
-import com.theobl.simpledarkoak.worldgen.ModConfiguredFeatures;
-import com.theobl.simpledarkoak.worldgen.ModPlacedFeatures;
+import net.theobl.simpledarkoak.SimpleDarkOak;
+import net.theobl.simpledarkoak.worldgen.ModBiomeModifiers;
+import net.theobl.simpledarkoak.worldgen.ModConfiguredFeatures;
+import net.theobl.simpledarkoak.worldgen.ModPlacedFeatures;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
