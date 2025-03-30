@@ -3,7 +3,7 @@
   "minVersion": "0.8",
   "package": "net.theobl.simpledarkoak.mixin",
   "compatibilityLevel": "JAVA_8",
-  "refmap": "SimpleDarkOak.refmap.json",
+  "refmap": "simpledarkoak.refmap.json",
   "mixins": [
     "DarkOakTreeGrowerMixin"
   ],
