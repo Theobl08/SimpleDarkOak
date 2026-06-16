@@ -1,5 +1,7 @@
 package net.theobl.simpledarkoak.worldgen;
 
+import net.minecraft.core.HolderGetter;
+import net.minecraft.world.level.biome.Biome;
 import net.theobl.simpledarkoak.SimpleDarkOak;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -21,19 +23,24 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> SIMPLE_PALE_OAK_KEY = registerKey("simple_pale_oak");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
+        HolderGetter<Biome> biomes = context.lookup(Registries.BIOME);
+        BlockStateProvider belowTrunkProvider = TreeConfiguration.defaultPlaceBelowTreeTrunkProvider(biomes);
+
         register(context, SIMPLE_DARK_OAK_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(Blocks.DARK_OAK_LOG),
                 new StraightTrunkPlacer(4,1,0),
                 BlockStateProvider.simple(Blocks.DARK_OAK_LEAVES),
                 new DarkOakFoliagePlacer(ConstantInt.of(0), ConstantInt.of(0)),
-                new TwoLayersFeatureSize(1,0,1)).ignoreVines().build());
+                new TwoLayersFeatureSize(1,0,1),
+                belowTrunkProvider).ignoreVines().build());
 
         register(context, SIMPLE_PALE_OAK_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(Blocks.PALE_OAK_LOG),
                 new StraightTrunkPlacer(4,1,0),
                 BlockStateProvider.simple(Blocks.PALE_OAK_LEAVES),
                 new DarkOakFoliagePlacer(ConstantInt.of(0), ConstantInt.of(0)),
-                new TwoLayersFeatureSize(1,0,1)).ignoreVines().build());
+                new TwoLayersFeatureSize(1,0,1),
+                belowTrunkProvider).ignoreVines().build());
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
