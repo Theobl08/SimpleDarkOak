@@ -12,6 +12,7 @@ import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.grower.TreeGrower;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.api.distmarker.Dist;
@@ -30,7 +31,10 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import net.theobl.simpledarkoak.worldgen.ModConfiguredFeatures;
 import org.slf4j.Logger;
+
+import java.util.Optional;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(SimpleDarkOak.MODID)
@@ -93,6 +97,12 @@ public class SimpleDarkOak {
 //        LOGGER.info(Config.magicNumberIntroduction + Config.magicNumber);
 
 //        Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
+        if(TreeGrower.DARK_OAK.tree.isEmpty()) {
+            TreeGrower.DARK_OAK.tree = Optional.of(ModConfiguredFeatures.SIMPLE_DARK_OAK_KEY);
+        }
+        if(TreeGrower.PALE_OAK.tree.isEmpty()) {
+            TreeGrower.PALE_OAK.tree = Optional.of(ModConfiguredFeatures.SIMPLE_PALE_OAK_KEY);
+        }
     }
 
     // Add the example block item to the building blocks tab
